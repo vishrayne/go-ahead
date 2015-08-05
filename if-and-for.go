@@ -17,7 +17,7 @@ func main() {
 	}
 
 	// ask for `j` here and you get an undefined var error.
-	// so for is the only loop in this lang. Also testing if loop.
+	// so for is the only loop in this lang. Also testing if/else conditional.
 	for {
 		// another concat, and yup order doesn't matter.
 		fmt.Println("Infinity and beyond...", i)
@@ -26,6 +26,8 @@ func main() {
 		if i == 0 {
 			fmt.Println("Just joking!")
 			break;
+		} else {
+			fmt.Println("evil laugh...")
 		}
 	}
 }
