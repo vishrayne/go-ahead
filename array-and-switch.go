@@ -10,6 +10,10 @@ func main() {
 		fmt.Println("Value of array at pos",  i,  "=>", a[i])
 	}
 
+	// Ok, let the compiler calculate the array size
+	agent := [...]int { 0 ,0 , 7 }
+	fmt.Println("Total digits in agent code is", len(agent))
+
 	// Arrays have their place, but they're a bit inflexible. 
 	// See http://blog.golang.org/go-slices-usage-and-internals
 	// So we trying out his brother, slice -- an abstraction built on top of go's array type.
@@ -37,4 +41,15 @@ func main() {
 	// Without switch. Meh!
 	day = 3
 	fmt.Println(day, "is", slice[day])
+
+	// 2D array
+	const row, col int = 3, 3
+ 	var threeDimArray [row][col]int
+
+	for i := 0; i < row; i++ {
+		for j := 0; j < col; j++ {
+			threeDimArray[i][j] = i+j
+		}
+	}
+	fmt.Println("3D array is ", threeDimArray)
 }
